@@ -12,13 +12,15 @@
      <div class="container">
          <div class="row home-row">
              <div class="col-sm-6 home-col">
-                 <div class="card border-primary mb-3">
-                     <img class="card-img-top" src="holder.js/100x180/" alt="">
-                     <div class="card-body">
-                         <h4 class="card-title">Fish</h4>
-                         <p class="card-text text-primary ">Come view all the fish the game has to offer. From tiny carps to gigantic Bass.</p>
-                     </div>
-                 </div>
+                 <router-link to="/fishes">
+                    <div class="card border-primary mb-3">
+                        <img class="card-img-top" src="holder.js/100x180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Fish</h4>
+                            <p class="card-text text-primary ">Come view all the fish the game has to offer. From tiny carps to gigantic Bass.</p>
+                        </div>
+                    </div>
+                 </router-link>
              </div>
              <div class="col-sm-6 home-col">
                  <h1>Villagers</h1>

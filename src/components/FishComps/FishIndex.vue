@@ -1,5 +1,7 @@
 <template>
     <div>
+        <h1>Fish</h1>
+
     </div>
 </template>
 
@@ -7,7 +9,11 @@
 
 <script>
 export default {
-    
+    data: function() {
+        return{
+            fish: [],
+        }
+    }
 }
 </script>
 
