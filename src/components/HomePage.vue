@@ -12,7 +12,13 @@
      <div class="container">
          <div class="row home-row">
              <div class="col-sm-6 home-col">
-                 <h1>Fish</h1>
+                 <div class="card border-primary mb-3">
+                     <img class="card-img-top" src="holder.js/100x180/" alt="">
+                     <div class="card-body">
+                         <h4 class="card-title">Fish</h4>
+                         <p class="card-text text-primary ">Come view all the fish the game has to offer. From tiny carps to gigantic Bass.</p>
+                     </div>
+                 </div>
              </div>
              <div class="col-sm-6 home-col">
                  <h1>Villagers</h1>
@@ -33,15 +39,10 @@
           
         
 <style>
-
 .home-row {
     margin-bottom: 5%;
 }
 
-.home-col:hover{
-    background-color:  	#ff9391;
-    border-radius: 5px;
-}
 
 </style>
 
