@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Fish</h1>
-        <li v-for="f in fish" v-bind:key='f.id'>{{f.name['name-en']}}</li>
+        <li v-for="f in fish" v-bind:key='f.id'>{{f.name['name-en']}} ${{f.price}}</li>
     </div>
 </template>
 
