@@ -1,11 +1,17 @@
 <template>
     <div>
         <h1>Fish</h1>
-        <li v-for="f in fish" v-bind:key='f.id'>{{f.name['name-en']}} ${{f.price}}</li>
+     <div v-for="f in fish" v-bind:key='f.id' class="card">
+            <img class="card-img-top" src="holder.js/100x180/" alt="">
+            <div class="card-body">
+                <h4 class="card-title"> {{f.name['name-en']}} </h4>
+                <p class="card-text"> ${{f.price}}</p>
+            </div>
+        </div> 
     </div>
 </template>
 
-<!-- divider -->
+<!-- divider-->
 
 <script>
 import axios from 'axios'

@@ -1,17 +1,22 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand navbar-light bg-light">
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><router-link to="/">Home</router-link><span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Nav 2</a>
-                </li>
-            </ul>
-        </nav>
+        <b-navbar type="dark" variant="info">
+            <b-navbar-nav>
+                <b-nav-item href="#"><router-link to="/">Home</router-link></b-nav-item>
+                <b-nav-item href="#">About</b-nav-item>
+                <!-- Navbar dropdowns -->
+                <b-nav-item-dropdown text="Categories" right>
+                    <b-dropdown-item href="#"><router-link to="/fishes">Fishes</router-link></b-dropdown-item>
+                    <b-dropdown-item href="#">Villagers</b-dropdown-item>
+                    <b-dropdown-item href="#">Fossils</b-dropdown-item>
+                    <b-dropdown-item href="#">Bugs</b-dropdown-item>
+                </b-nav-item-dropdown>
+            </b-navbar-nav>
+        </b-navbar>
     </div>
 </template>
+
+
 
 <style >
 </style>
