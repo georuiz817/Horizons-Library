@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Fish</h1>
-        <li v-for="f in fish" v-bind:key='f.id'>{{f.price}}</li>
+        <li v-for="f in fish" v-bind:key='f.id'></li>
     </div>
 </template>
 
@@ -22,6 +22,10 @@ export default {
         .then(fish => {
             this.fish = fish.data
         })
+    },
+
+    methods(){
+
     }
 }
 </script>
