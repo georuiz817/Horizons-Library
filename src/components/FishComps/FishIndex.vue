@@ -1,18 +1,27 @@
 <template>
     <div>
         <h1>Fish</h1>
-
+        <li v-for="f in fish" v-bind:key='f.id'>{{f.price}}</li>
     </div>
 </template>
 
 <!-- divider -->
 
 <script>
+import axios from 'axios'
+
 export default {
-    data: function() {
+    data() {
         return{
             fish: [],
         }
+    },
+
+    created(){
+        axios.get('http://acnhapi.com/fish/')
+        .then(fish => {
+            this.fish = fish.data
+        })
     }
 }
 </script>
