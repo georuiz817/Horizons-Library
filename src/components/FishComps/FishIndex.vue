@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div  v-if="loading">
+    <div v-if="loading">
         <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
     </div>
     <div v-else>
@@ -38,7 +38,7 @@ export default {
         .then(fish => {
             this.fish = fish.data
         })
-        .then(() => (this.loading = false))
+        .finally(() => (this.loading = false))
     },
 
     methods(){
@@ -50,7 +50,5 @@ export default {
 <!-- divider -->
 
 <style>
-.card:hover{
-    background-color: black;
-}
+
 </style>
