@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar>
+        <b-navbar type='dark'>
             <b-navbar-nav>
                 <b-nav-item href="#"><router-link to="/">Home</router-link></b-nav-item>
                 <b-nav-item href="#">About</b-nav-item>
@@ -18,8 +18,8 @@
 
 
 
-<style >
+<style  lang='scss'>
 .navbar{
-    background-color: #83A0A0;
+    background-color: #A3D5FF;
 }
 </style>

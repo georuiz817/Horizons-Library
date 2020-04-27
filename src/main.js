@@ -7,6 +7,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import VueRouter from 'vue-router';
 import HomePage from './components/HomePage.vue';
 import FishIndex from './components/FishComps/FishIndex.vue';
+import FishShow from './components/FishComps/FishShow.vue';
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
@@ -16,6 +17,7 @@ Vue.config.productionTip = false
 const routes = [
   { path: '/', component: HomePage },
   { path: '/fish', component: FishIndex},
+  { path: '/currentFish/:id', component: FishShow},
 
 ]
 

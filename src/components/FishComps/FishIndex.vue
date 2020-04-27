@@ -8,16 +8,18 @@
         <p>Click a fish and get all its additional details</p>
         <div v-for="f in fish" v-bind:key='f.id' class="card">
             <b-card text-variant="primary">
+                 <router-link :to="'/currentFish/' + f.id" >
                  <b-card-text>
                     {{f.name['name-en']}} 
                  </b-card-text>
                  <b-card-text>
                     ${{f.price}}
                  </b-card-text>
+                </router-link>
             </b-card>
         </div>
     </div>
-    </div>
+</div>
 </template>
 
 <!-- divider-->
@@ -49,6 +51,6 @@ export default {
 
 <!-- divider -->
 
-<style>
+<style lang='scss'>
 
 </style>

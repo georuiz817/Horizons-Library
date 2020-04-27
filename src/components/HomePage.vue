@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <b-jumbotron header="Horizons Library" lead="For all your Animal Crossing needs">
+    <div class='home-page'>
+        <b-jumbotron text-variant="white" header="Horizons Library" lead="For all your Animal Crossing needs">
             <p>Choose a category and search through hundreds of avaliable options. Feel free to click one you like and get additional information.</p>
             <p>Horizons Library is a great tool to use through your time playing to find and learn about the game</p>
             <b-button variant="primary" href="#">More Info</b-button>
@@ -47,9 +47,15 @@
 </template>
  
         
-<style>
-.jumbotron{
-    background: #BCA0BC;
+<style lang='scss'>
+.home-page{
+    background-color: #A3D5FF;
+    .jumbotron{
+        background-image: url('../assets/tom-nook.jpg');
+        background-size: 100% 100%;
+    }
 }
+
+
 </style>
 
