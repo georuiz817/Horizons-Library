@@ -15,7 +15,8 @@ Vue.config.productionTip = false
 
 const routes = [
   { path: '/', component: HomePage },
-  { path: '/fishes', component: FishIndex},
+  { path: '/fish', component: FishIndex},
+
 ]
 
 const router = new VueRouter({

@@ -1,18 +1,26 @@
 <template>
-    <div>
+<div>
+    <div  v-if="loading">
+        <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
+    </div>
+    <div v-else>
         <h1>Fish</h1>
-     <div v-for="f in fish" v-bind:key='f.id' class="card">
-            <img class="card-img-top" src="holder.js/100x180/" alt="">
-            <div class="card-body">
-                <h4 class="card-title"> {{f.name['name-en']}} </h4>
-                <p class="card-text"> ${{f.price}}</p>
-            </div>
-        </div> 
+        <p>Click a fish and get all its additional details</p>
+        <div v-for="f in fish" v-bind:key='f.id' class="card">
+            <b-card text-variant="primary">
+                 <b-card-text>
+                    {{f.name['name-en']}} 
+                 </b-card-text>
+                 <b-card-text>
+                    ${{f.price}}
+                 </b-card-text>
+            </b-card>
+        </div>
+    </div>
     </div>
 </template>
 
 <!-- divider-->
-
 <script>
 import axios from 'axios'
 
@@ -20,6 +28,7 @@ export default {
     data() {
         return{
             fish: [],
+            loading: true,
         }
     },
 
@@ -28,6 +37,7 @@ export default {
         .then(fish => {
             this.fish = fish.data
         })
+        .then(() => (this.loading = false))
     },
 
     methods(){
@@ -39,5 +49,7 @@ export default {
 <!-- divider -->
 
 <style>
-
+.card:hover{
+    background-color: black;
+}
 </style>

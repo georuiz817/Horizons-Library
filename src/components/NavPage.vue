@@ -6,7 +6,7 @@
                 <b-nav-item href="#">About</b-nav-item>
                 <!-- Navbar dropdowns -->
                 <b-nav-item-dropdown text="Categories" right>
-                    <b-dropdown-item href="#"><router-link to="/fishes">Fishes</router-link></b-dropdown-item>
+                    <b-dropdown-item href="#"><router-link to="/fish">Fish</router-link></b-dropdown-item>
                     <b-dropdown-item href="#">Villagers</b-dropdown-item>
                     <b-dropdown-item href="#">Fossils</b-dropdown-item>
                     <b-dropdown-item href="#">Bugs</b-dropdown-item>
