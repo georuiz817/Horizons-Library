@@ -28,11 +28,12 @@ export default {
     data() {
         return{
             fish: [],
-            loading: true,
+            loading: false,
         }
     },
 
     created(){
+        this.loading = true 
         axios.get('http://acnhapi.com/fish/')
         .then(fish => {
             this.fish = fish.data
