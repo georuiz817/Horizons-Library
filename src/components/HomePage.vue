@@ -48,6 +48,8 @@
  
         
 <style>
-
+.jumbotron{
+    background: #BCA0BC;
+}
 </style>
 
