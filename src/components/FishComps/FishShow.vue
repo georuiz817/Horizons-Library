@@ -1,9 +1,9 @@
 <template>
     <div>
-        <b-card class="mx-auto mt-5" style="max-width: 70%;">
+        <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
-                    {{FishImage.image}}
+                   
                 </b-col>
                 <b-col md="6">
                     <b-card-body>
@@ -29,6 +29,7 @@
                                 </b-col>
                             </b-row>
                         </b-card-body>
+                        <hr>
                     </b-card-body>
                 </b-col>
             </b-row>
@@ -49,7 +50,7 @@ export default {
         return{
             id: this.$route.params.id,
             currentFish: {},
-            FishImage: {image: {}},
+            FishImage: null,
         }
     },
 
@@ -60,7 +61,7 @@ export default {
         ])
         .then(axios.spread((currentFish, FishImage) => {
               this.currentFish = currentFish.data;
-              this.FishImage.image = FishImage.data
+              this.FishImage = FishImage.data
         }));
     },
     
