@@ -1,32 +1,41 @@
 <template>
     <div>
-        <b-card
-            img-src="https://picsum.photos/600/300/?image=25"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 40rem;"
-            class="mb-2 mt-2 mx-auto"
-        >
-            <b-card-title>{{currentFish.name['name-en']}}</b-card-title>
-            <b-card-text>{{currentFish['catch-phrase']}}</b-card-text>
+        <b-card class="mx-auto mt-5" style="max-width: 70%;">
             <b-row>
-                <b-col class='mb-5 mt-2'> 
-                    <b-card-text>Avaliability</b-card-text>
-                    <b-card-text>Location: {{currentFish.availability.location}}</b-card-text>
-                    <b-card-text>Rarity: {{currentFish.availability.rarity}}</b-card-text>
-                    <b-card-text>Rarity: {{currentFish.availability.rarity}}</b-card-text>
-                    <b-card-text>All day?: {{currentFish.availability.isAllDay}}</b-card-text>
-                    <b-card-text>All year?: {{currentFish.availability.isAllYear}}</b-card-text>
-                    <b-card-text>Through: {{currentFish.availability['month-northern']}} and {{currentFish.availability['month-southern']}}</b-card-text>
+                <b-col md="6">
+                    <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
                 </b-col>
-                <b-col class='mb-5 mt-2'> 
-                    <b-card-text>Price</b-card-text>
-                    <b-card-text>{{currentFish.price}} bells</b-card-text>
+                <b-col md="6">
+                    <b-card-body>
+                        <b-card-title>{{currentFish.name['name-en']}}</b-card-title>
+                        <b-card-text>{{currentFish['catch-phrase']}}</b-card-text>
+                        <hr>
+                        <b-card-body class='mt-2'>
+                            <b-card-title>Price</b-card-title>
+                            <b-card-text>{{currentFish.price}} bells</b-card-text>
+                        </b-card-body>
+                        <hr>
+                        <b-card-body class="mt-2">
+                            <b-card-title>Avaliability</b-card-title>
+                            <b-row> 
+                                <b-col>
+                                    <b-card-text>Location: {{currentFish.availability.location}}</b-card-text>
+                                </b-col>
+                                <b-col>
+                                    <b-card-text>Rarity: {{currentFish.availability.rarity}}</b-card-text>
+                                </b-col>
+                                <b-col>
+                                    <b-card-text>All day?: {{currentFish.availability.isAllDay}}</b-card-text>
+                                </b-col>
+                            </b-row>
+                        </b-card-body>
+                    </b-card-body>
                 </b-col>
             </b-row>
-                                <b-card-text>Musuem Description</b-card-text>
-                    <b-card-text>{{currentFish['museum-phrase']}}</b-card-text>
+            <b-card-body>
+                <b-card-title>Musuem description</b-card-title>
+                <b-card-text>{{currentFish['museum-phrase']}}</b-card-text>
+            </b-card-body>
         </b-card>
     </div>
     
@@ -57,3 +66,10 @@ export default {
 <style lang="stylus">
 
 </style>
+
+
+
+
+
+
+                   
