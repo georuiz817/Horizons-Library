@@ -6,56 +6,43 @@
             <b-button variant="primary" href="#">More Info</b-button>
         </b-jumbotron>
         <b-container> 
-        <b-row class="mb-2">
-            <b-col>
-                <b-card bg-variant="dark" text-variant="white" title="Fish">
-                    <b-card-text>
-                        I caught a blue marlin! Listen to this fish, it's got a point.
-                    </b-card-text>
-                    <b-button href='/fish' variant="primary">Explore</b-button> 
-                </b-card>
-            </b-col>
-            <b-col>
-                <b-card bg-variant="dark" text-variant="white" title="Villagers">
-                    <b-card-text>
-                        It's cold outside, huh? Well, stick around and thaw yourself out!
-                    </b-card-text>
-                    <b-button href="/villagers" variant="primary">Explore</b-button>
-                </b-card>
-            </b-col>
-        </b-row>
-        <b-row class="mb-2">
-            <b-col>
-                <b-card bg-variant="dark" text-variant="white" title="Bugs">
-                    <b-card-text>
-                        I caught a mantis! Man, 'tis so cool!
-                    </b-card-text>
-                    <b-button href="#" variant="primary">Explore</b-button>
-                </b-card>
-            </b-col>
-            <b-col>
-                <b-card bg-variant="dark" text-variant="white" title="Fossils">
-                    <b-card-text>
-                        Look! I dug up a fossil!
-                    </b-card-text>
-                    <b-button href="#" variant="primary">Go somewhere</b-button>
-                </b-card>
-            </b-col>
-        </b-row>
-       </b-container>
+            <b-row class='mb-2'>
+                <b-col>
+                    <b-card bg-variant="dark" text-variant="white" title="Fish">
+                        <b-card-text>
+                            I caught a blue marlin! Listen to this fish, it's got a point.
+                        </b-card-text>
+                        <b-button href='/fish' variant="primary">Explore</b-button> 
+                    </b-card>
+                </b-col>
+                <b-col>
+                    <b-card bg-variant="dark" text-variant="white" title="Villagers">
+                        <b-card-text>
+                            It's cold outside, huh? Well, stick around and thaw yourself out!
+                        </b-card-text>
+                        <b-button href="/villagers" variant="primary">Explore</b-button>
+                    </b-card>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
 </template>
  
         
 <style lang='scss'>
+$homeColor:#A3D5FF;
+
+html body{
+    background-color: $homeColor;
+}
+
 .home-page{
-    background-color: #A3D5FF;
+    background-color: $homeColor;
     .jumbotron{
         background-image: url('../assets/tom-nook.jpg');
         background-size: 100% 100%;
     }
 }
-
 
 </style>
 
