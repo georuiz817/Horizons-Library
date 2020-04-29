@@ -3,7 +3,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
-                   
+                   <img :src="`FishImage/png;base64`"  />
                 </b-col>
                 <b-col md="6">
                     <b-card-body>
