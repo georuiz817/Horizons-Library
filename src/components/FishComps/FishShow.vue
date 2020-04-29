@@ -3,7 +3,7 @@
         <b-card class="mx-auto mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
-                    <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
+                    {{FishImage.image}}
                 </b-col>
                 <b-col md="6">
                     <b-card-body>
@@ -49,14 +49,19 @@ export default {
         return{
             id: this.$route.params.id,
             currentFish: {},
+            FishImage: {image: {}},
         }
     },
 
        created(){
-        axios.get('http://acnhapi.com/fish/' + this.id)
-        .then(currentFish => {
-            this.currentFish = currentFish.data;
-        })
+        axios.all([
+          axios.get('http://acnhapi.com/fish/' + this.id),
+          axios.get('http://acnhapi.com/images/fish/' + this.id),
+        ])
+        .then(axios.spread((currentFish, FishImage) => {
+              this.currentFish = currentFish.data;
+              this.FishImage.image = FishImage.data
+        }));
     },
     
 }
@@ -70,6 +75,11 @@ export default {
 
 
 
-
+       created(){
+        axios.get('http://acnhapi.com/fish/' + this.id)
+        .then(currentFish => {
+            this.currentFish = currentFish.data;
+        })
+    },
 
                    
