@@ -4,14 +4,11 @@
         <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
     </div>
     <div v-else>
-        <h1>Fish</h1>
-        <p>Click a fish and get all its additional details</p>
-        <div v-for="f in fish" v-bind:key='f.id' class="card">
-            <b-card text-variant="primary">
-                 <router-link :to="'/currentFish/' + f.id" >
-                 <b-card-title>{{f.name['name-en']}}</b-card-title>
-                 <b-card-text>${{f.price}}</b-card-text>
-                </router-link>
+        <h1>Villagers</h1>
+        <p>Click a Villager to meet them</p>
+        <div v-for="v in villagers" v-bind:key='v.id' class="card">
+            <b-card text-variant="primary">                 
+                <b-card-title>{{v.name['name-en']}}</b-card-title>
             </b-card>
         </div>
     </div>
@@ -25,19 +22,20 @@ import axios from 'axios'
 export default {
     data() {
         return{
-            fish: [],
+            villagers: [],
             loading: false,
         }
     },
 
     created(){
         this.loading = true 
-        axios.get('http://acnhapi.com/fish/')
-        .then(fish => {
-            this.fish = fish.data
+        axios.get('http://acnhapi.com/villagers/')
+        .then(villagers => {
+            this.villagers = villagers.data
         })
         .finally(() => (this.loading = false))
     },
+
 }
 </script>
 

@@ -7,7 +7,7 @@
                 <!-- Navbar dropdowns -->
                 <b-nav-item-dropdown text="Categories" right>
                     <b-dropdown-item href="/fish">Fish</b-dropdown-item>
-                    <b-dropdown-item href="#">Villagers</b-dropdown-item>
+                    <b-dropdown-item href="/villagers">Villagers</b-dropdown-item>
                     <b-dropdown-item href="#">Fossils</b-dropdown-item>
                     <b-dropdown-item href="#">Bugs</b-dropdown-item>
                 </b-nav-item-dropdown>
