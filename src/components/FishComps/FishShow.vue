@@ -76,11 +76,5 @@ export default {
 
 
 
-       created(){
-        axios.get('http://acnhapi.com/fish/' + this.id)
-        .then(currentFish => {
-            this.currentFish = currentFish.data;
-        })
-    },
 
                    
