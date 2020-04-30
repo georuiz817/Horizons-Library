@@ -1,5 +1,10 @@
 <template>
     <div>
+        <div v-if="loading">
+            <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
+        </div>
+      
+        <div v-else>
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
@@ -38,6 +43,7 @@
                 <b-card-text>{{currentFish['museum-phrase']}}</b-card-text>
             </b-card-body>
         </b-card>
+        </div>
     </div>
     
 </template>
@@ -51,10 +57,12 @@ export default {
             id: this.$route.params.id,
             currentFish: {},
             FishImage: null,
+            loading: false,
         }
     },
 
        created(){
+        this.loading = true 
         axios.all([
           axios.get('http://acnhapi.com/fish/' + this.id),
           axios.get('http://acnhapi.com/images/fish/' + this.id),
@@ -62,10 +70,11 @@ export default {
         .then(axios.spread((currentFish, FishImage) => {
               this.currentFish = currentFish.data;
               this.FishImage = FishImage.data
-        }));
-    },
-    
-}
+              })
+            )
+        .finally(() => (this.loading = false))
+        },
+    }
 
 </script>
 
