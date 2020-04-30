@@ -12,7 +12,7 @@
                         <b-card-text>
                             I caught a blue marlin! Listen to this fish, it's got a point.
                         </b-card-text>
-                        <b-button href='/fish' variant="primary">Explore</b-button> 
+                         <router-link to="/fish"><b-button variant="primary">Explore</b-button></router-link>
                     </b-card>
                 </b-col>
                 <b-col>
@@ -20,7 +20,7 @@
                         <b-card-text>
                             It's cold outside, huh? Well, stick around and thaw yourself out!
                         </b-card-text>
-                        <b-button href="/villagers" variant="primary">Explore</b-button>
+                        <router-link to="/villagers"><b-button variant="primary">Explore</b-button></router-link>
                     </b-card>
                 </b-col>
             </b-row>
