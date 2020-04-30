@@ -25,7 +25,7 @@ export default {
     },
 
     created(){
-        axios.get('http://acnhapi.com/fish/')
+        axios.get('https://acnhapi.com/fish/')
         .then(fish => {
             this.fish = fish.data
         })
