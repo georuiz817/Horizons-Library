@@ -22,7 +22,7 @@ export default {
     },
 
     created(){
-        axios.get('https://acnhapi.com/villagers/')
+        axios.get('http://acnhapi.com/villagers/')
         .then(villagers => {
             this.villagers = villagers.data
         })

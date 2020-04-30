@@ -56,8 +56,8 @@ export default {
 
        created(){
         axios.all([
-          axios.get('https://acnhapi.com/fish/' + this.id),
-          axios.get('https://acnhapi.com/images/fish/' + this.id),
+          axios.get('http://acnhapi.com/fish/' + this.id),
+          axios.get('http://acnhapi.com/images/fish/' + this.id),
         ])
         .then(axios.spread((currentFish, FishImage) => {
               this.currentFish = currentFish.data;
