@@ -19,7 +19,7 @@ const routes = [
   { path: '/', component: HomePage },
   { path: '/fish', component: FishIndex},
   { path: '/currentFish/:id', component: FishShow},
-  {path: '/villagers', component: VillagerIndex}
+  { path: '/villagers', component: VillagerIndex},
 ]
 
 const router = new VueRouter({
