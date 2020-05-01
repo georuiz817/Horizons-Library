@@ -9,8 +9,10 @@
             <b-card-text>Choose a Villager and say hello</b-card-text>
         </b-card>
         <div v-for="v in villagers" v-bind:key='v.id'>
-            <b-card class="loopCard mx-auto mb-2">                 
-                <b-card-title>{{v.name['name-en']}}</b-card-title>
+            <b-card class="loopCard mx-auto mb-2">
+                <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
+                    <b-card-title>{{v.name['name-en']}}</b-card-title>
+                </router-link>
             </b-card>
         </div>
     </div>

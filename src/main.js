@@ -9,6 +9,7 @@ import HomePage from './components/HomePage.vue';
 import FishIndex from './components/FishComps/FishIndex.vue';
 import FishShow from './components/FishComps/FishShow.vue';
 import VillagerIndex from './components/VillagerComps/VillagerIndex.vue';
+import VillagerShow from './components/VillagerComps/VillagerShow.vue';
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
@@ -20,6 +21,7 @@ const routes = [
   { path: '/fish', component: FishIndex},
   { path: '/currentFish/:id', component: FishShow},
   { path: '/villagers', component: VillagerIndex},
+  {path: '/currentVillager/:id', component: VillagerShow}
 ]
 
 const router = new VueRouter({

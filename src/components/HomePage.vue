@@ -1,8 +1,8 @@
 <template>
     <div class='home-page'>
         <b-jumbotron bg-variant="light" class='mt-3 mx-auto'  header="Horizons Library" lead="For all your Animal Crossing needs">
-            <p>Choose a category and search through hundreds of avaliable options. Feel free to click one you like and get additional information.</p>
-            <p>Horizons Library is a great tool to use through your time playing to find and learn about the game</p>
+           <b-card-text>Choose a category and search through hundreds of avaliable options. Feel free to click one you like and get additional information. </b-card-text>
+            <b-card-text>Horizons Library is a great tool to use through your time playing to find and learn about the game</b-card-text>
             <b-button variant="primary" href="#">More Info</b-button>
         </b-jumbotron>
         <b-container> 
@@ -33,6 +33,7 @@
 
 .jumbotron{
     color: #2c3e50;
+    width: 80%;
 }
 
 </style>

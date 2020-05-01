@@ -17,7 +17,5 @@
 
 
 <style  lang='scss'>
-.navbar{
-    background-color: #A3D5FF;
-}
+
 </style>
