@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar type='dark' variant='dark'>
+        <b-navbar type='light' variant='light'>
             <b-navbar-nav>
                 <b-nav-item href="#"><router-link to="/">Home</router-link></b-nav-item>
                 <b-nav-item href="#">About</b-nav-item>

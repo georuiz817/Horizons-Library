@@ -3,7 +3,6 @@
         <div v-if="loading">
             <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
         </div>
-      
         <div v-else>
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
@@ -78,7 +77,8 @@ export default {
 
 </script>
 
-<style lang="stylus">
+<style lang="scss">
+
 
 </style>
 

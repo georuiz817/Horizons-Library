@@ -17,6 +17,10 @@ export default {
 </script>
 
 <style>
+body{
+      background-image: url('https://nintendowire.com/wp-content/uploads/2020/02/Walmart-AnimalCrossing-NewHorizons-Wallpaper-Characters.jpg');
+      background-size: contain;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

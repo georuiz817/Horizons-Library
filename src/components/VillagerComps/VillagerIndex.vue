@@ -3,12 +3,13 @@
     <div v-if="loading">
         <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
     </div>
-
     <div v-else>
-        <h1>Villagers</h1>
-        <p>Click a Villager to meet them</p>
-        <div v-for="v in villagers" v-bind:key='v.id' class="card">
-            <b-card text-variant="primary">                 
+        <b-card class='loopCard mx-auto mb-2 mt-2'>
+            <b-card-title>Villagers</b-card-title>
+            <b-card-text>Choose a Villager and say hello</b-card-text>
+        </b-card>
+        <div v-for="v in villagers" v-bind:key='v.id'>
+            <b-card class="loopCard mx-auto mb-2">                 
                 <b-card-title>{{v.name['name-en']}}</b-card-title>
             </b-card>
         </div>
@@ -43,5 +44,10 @@ export default {
 <!-- divider -->
 
 <style lang='scss'>
+
+.loopCard{
+    width: 50%;
+      color: #2c3e50;;
+}
 
 </style>
