@@ -1,13 +1,13 @@
 <template>
     <div>
         <div v-if="loading">
-            <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
+            <b-spinner class='mt-5' variant="warning" style="width: 5rem; height: 5rem;" label="Large Spinner"></b-spinner>
         </div>
         <div v-else>
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col sm="6">
-                   <img :src="`FishImage/png;base64`"  />
+                    fish image
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>

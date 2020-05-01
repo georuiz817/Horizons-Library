@@ -1,7 +1,7 @@
 <template>
 <div>
     <div v-if="loading">
-        <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
+        <b-spinner class='mt-5' variant="warning" style="width: 5rem; height: 5rem;" label="Large Spinner"></b-spinner>
     </div>
     <div v-else>
         <b-card class='loopCard mx-auto mb-2 mt-2 bg-warning'>
@@ -52,4 +52,5 @@ export default {
     color: #2c3e50;;
  }
 }
+
 </style>
