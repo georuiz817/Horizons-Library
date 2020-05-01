@@ -4,7 +4,7 @@
         <b-spinner variant="primary" style="width: 3rem; height: 3rem;" label="Large Spinner"></b-spinner>
     </div>
     <div v-else>
-        <b-card class='loopCard mx-auto mb-2 mt-2'>
+        <b-card  class='loopCard mx-auto mb-2 mt-2 bg-warning'>
             <b-card-title>Villagers</b-card-title>
             <b-card-text>Choose a Villager and say hello</b-card-text>
         </b-card>
