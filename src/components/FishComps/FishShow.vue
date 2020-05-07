@@ -7,7 +7,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col sm="6">
-                    <img src='https://vignette.wikia.nocookie.net/animalcrossing/images/8/8e/Nh-crucian-carp.jpg/revision/latest?cb=20200331063203'  height='90%' width='100%' alt='n/a'/>
+                    <img :src="'http://acnhapi.com/images/fish/' + currentFish.id" width='100%' height="100%">
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>
