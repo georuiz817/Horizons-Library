@@ -12,6 +12,7 @@
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
                     <b-card-title>{{v.name['name-en']}}</b-card-title>
+                    <b-card-text>"{{v['catch-phrase']}}"</b-card-text>
                 </router-link>
             </b-card>
         </div>

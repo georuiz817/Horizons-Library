@@ -12,7 +12,7 @@
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentFish/' + f.id" >
                 <b-card-title>{{f.name['name-en']}}</b-card-title>
-                <b-card-text>${{f.price}}</b-card-text>
+                <b-card-text>{{f.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
                 </router-link>
             </b-card>
         </div>
