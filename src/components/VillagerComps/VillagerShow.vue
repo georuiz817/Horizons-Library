@@ -10,11 +10,12 @@
                    <img :src="'http://acnhapi.com/images/villagers/' + currentVillager.id" width='100%' height="100%">
                 </b-col>
                 <b-col md="6">
-                    <b-card-body>
-                        <b-card-title>{{currentVillager.name['name-en']}}</b-card-title>
-                        <b-card-text>"{{currentVillager['catch-phrase']}}"</b-card-text>
+                    <b-card-body class='mt-5'>
+                        <b-card-title title-tag='h1'>{{currentVillager.name['name-en']}}</b-card-title>
+                        <b-card-text><em>"{{currentVillager['catch-phrase']}}"</em></b-card-text>
+                        <br>
                         <hr>
-                        <b-card-body class="mt-2">
+                        <b-card-body>
                             <b-card-title>About</b-card-title>
                             <b-row> 
                                 <b-col sm='6' class='mt-2'>
@@ -33,7 +34,6 @@
                                 </b-col>                               
                             </b-row>
                         </b-card-body>
-                        <hr>
                     </b-card-body>
                 </b-col>
             </b-row>

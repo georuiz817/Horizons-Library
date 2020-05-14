@@ -11,7 +11,7 @@
         <div v-for="f in fish" v-bind:key='f.id'>
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentFish/' + f.id" >
-                <b-card-title>{{f.name['name-en']}}</b-card-title>
+                <b-card-title>{{f.name['name-en'] | capitalize}}</b-card-title>
                 <b-card-text>{{f.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
                 </router-link>
             </b-card>

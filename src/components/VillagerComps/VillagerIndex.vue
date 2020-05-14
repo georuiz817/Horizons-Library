@@ -12,7 +12,7 @@
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
                     <b-card-title>{{v.name['name-en']}}</b-card-title>
-                    <b-card-text>"{{v['catch-phrase']}}"</b-card-text>
+                    <b-card-text><em>"{{v['catch-phrase']}}"</em></b-card-text>
                 </router-link>
             </b-card>
         </div>
@@ -50,7 +50,7 @@ export default {
 
 .loopCard{
     width: 50%;
-      color: #2c3e50;;
+      color: #2c3e50;
 }
 
 </style>

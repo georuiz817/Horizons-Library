@@ -30,6 +30,14 @@ const router = new VueRouter({
   routes, // short for `routes: routes`
 })
 
+Vue.mixin({
+  filters:{
+      capitalize: function(value){
+          return  value.charAt(0).toUpperCase() + value.slice(1)
+      }
+  }
+})
+
 new Vue({
   render: h => h(App),
   router,

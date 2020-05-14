@@ -11,8 +11,8 @@
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>
-                        <b-card-title>{{currentFish.name['name-en']}}</b-card-title>
-                        <b-card-text>{{currentFish['catch-phrase']}}</b-card-text>
+                        <b-card-title>{{currentFish.name['name-en'] | capitalize}}</b-card-title>
+                        <b-card-text><em>{{currentFish['catch-phrase']}}</em></b-card-text>
                         <hr>
                         <b-card-body sm="6" class='mt-2'>
                             <b-card-title>Price</b-card-title>
