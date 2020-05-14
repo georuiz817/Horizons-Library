@@ -16,7 +16,8 @@
                         <hr>
                         <b-card-body sm="6" class='mt-2'>
                             <b-card-title>Price</b-card-title>
-                            <b-card-text>{{currentFish.price}}<img width='15%' src='../../assets/bells_pic.png'/></b-card-text>
+                            <b-card-text>Store price:  {{currentFish.price}}<img width='15%' src='../../assets/bells_pic.png'/></b-card-text>
+                            <b-card-text>Cjs price: {{currentFish['price-cj']}}<img width='15%' src='../../assets/bells_pic.png'/></b-card-text>
                         </b-card-body>
                         <hr>
                         <b-card-body class="mt-2">
@@ -28,8 +29,13 @@
                                 <b-col sm="6" class="mt-2">
                                     <b-card-text>Rarity: {{currentFish.availability.rarity}}</b-card-text>
                                 </b-col>
+                            </b-row>
+                            <b-row>
                                 <b-col sm="6" class='mt-2'>
-                                    <b-card-text>All day?: {{currentFish.availability.isAllDay}}</b-card-text>
+                                    <b-card-text>Shadow Size: {{currentFish.shadow}}</b-card-text>
+                                </b-col>
+                                <b-col sm='6' class='mt-2'>
+                                    <b-card-text>Catchable all day?: {{currentFish.availability.isAllDay}}</b-card-text>
                                 </b-col>
                             </b-row>
                         </b-card-body>
