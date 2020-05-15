@@ -7,7 +7,7 @@
         <b-card  class='loopCard mx-auto mb-2 mt-2 bg-warning'>
             <b-card-title>Villagers</b-card-title>
             <b-card-text>Choose a Villager and say hello</b-card-text>
-            <input type='text' v-model='search' placeholder="search villager"/>
+            <b-form-input type='text' v-model='search' placeholder="search villager"></b-form-input>
         </b-card>
         <div v-for="v in filteredVillagers" v-bind:key='v.id'>
             <b-card class="loopCard mx-auto mb-2">

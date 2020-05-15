@@ -7,7 +7,7 @@
         <b-card class='loopCard mx-auto mb-2 mt-2 bg-warning'>
             <b-card-title>Fish</b-card-title>
             <b-card-text>Click a fish and get all its additional details</b-card-text>
-            <input type='text' v-model='search' placeholder="search fish"/>
+            <b-form-input  type='text' v-model='search' placeholder="search fish"></b-form-input>
         </b-card>
         <div v-for="f in filteredFish" v-bind:key='f.id'>
             <b-card class="loopCard mx-auto mb-2">
@@ -48,7 +48,7 @@ export default {
     computed:{
         filteredFish: function(){
             return this.fish.filter((fish)=>{
-                return fish.name['name-en'].match(this.search)
+                return fish.name['name-en'].match(this.search.toLowerCase())
             });
         }
     }
