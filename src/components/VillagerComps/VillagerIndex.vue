@@ -7,8 +7,9 @@
         <b-card  class='loopCard mx-auto mb-2 mt-2 bg-warning'>
             <b-card-title>Villagers</b-card-title>
             <b-card-text>Choose a Villager and say hello</b-card-text>
+            <input type='text' v-model='search' placeholder="search villager"/>
         </b-card>
-        <div v-for="v in villagers" v-bind:key='v.id'>
+        <div v-for="v in filteredVillagers" v-bind:key='v.id'>
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
                     <b-card-title>{{v.name['name-en']}}</b-card-title>
@@ -29,6 +30,7 @@ export default {
         return{
             villagers: [],
             loading: false,
+            search: '',
         }
     },
 
@@ -37,9 +39,19 @@ export default {
         axios.get('http://acnhapi.com/villagers/')
         .then(villagers => {
             this.villagers = villagers.data
+            this.villagers = Object.keys(this.villagers).map(i => this.villagers[i]) //convert it to array of objects to use filter
+            console.log(this.villagers)//logged to make sure working correctly
         })
         .finally(() => (this.loading = false))
     },
+
+        computed:{
+        filteredVillagers: function(){
+            return this.villagers.filter((v)=>{
+                return v.name['name-en'].match(this.search)
+            });
+        }
+    }
 
 }
 </script>

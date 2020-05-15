@@ -13,7 +13,6 @@
                     <b-card-body class='mt-5'>
                         <b-card-title title-tag='h1'>{{currentVillager.name['name-en']}}</b-card-title>
                         <b-card-text><em>"{{currentVillager['catch-phrase']}}"</em></b-card-text>
-                        <br>
                         <hr>
                         <b-card-body>
                             <b-card-title>About</b-card-title>
