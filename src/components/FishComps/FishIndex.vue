@@ -7,8 +7,9 @@
         <b-card class='loopCard mx-auto mb-2 mt-2 bg-warning'>
             <b-card-title>Fish</b-card-title>
             <b-card-text>Click a fish and get all its additional details</b-card-text>
+            <input type='text' v-model='search' placeholder="search fish"/>
         </b-card>
-        <div v-for="f in fish" v-bind:key='f.id'>
+        <div v-for="f in filteredFish" v-bind:key='f.id'>
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentFish/' + f.id" >
                 <b-card-title>{{f.name['name-en'] | capitalize}}</b-card-title>
@@ -29,6 +30,7 @@ export default {
         return{
             fish: [],
             loading: false,
+            search: '',
         }
     },
 
@@ -42,6 +44,14 @@ export default {
         })
         .finally(() => (this.loading = false))
     },
+    
+    computed:{
+        filteredFish: function(){
+            return this.fish.filter((fish)=>{
+                return fish.name['name-en'].match(this.search)
+            });
+        }
+    }
 }
 </script>
 
