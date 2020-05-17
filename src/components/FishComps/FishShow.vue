@@ -62,7 +62,6 @@ export default {
             id: this.$route.params.id,
             currentFish: {},
             FishImage: null,
-            loading: false,
         }
     },
 

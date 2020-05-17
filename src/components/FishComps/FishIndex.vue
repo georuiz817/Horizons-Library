@@ -29,7 +29,6 @@ export default {
     data() {
         return{
             fish: [],
-            loading: false,
             search: '',
         }
     },

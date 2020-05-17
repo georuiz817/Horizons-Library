@@ -51,7 +51,6 @@ export default {
             id: this.$route.params.id,
             currentVillager: {},
             VillagerImage: null,
-            loading: false,
         }
     },
 
