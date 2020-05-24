@@ -33,7 +33,7 @@ const router = new VueRouter({
 Vue.mixin({
   data: function(){
     return{
-      loading: false, //had loading in each seperate container, now in here to adhere to DRY. Trying to get by without using Vuex.
+      loading: false, //had loading in each seperate container, now in here to adhere to DRY. Trying to get by without using Vuex.z
     }
   },
   filters:{
