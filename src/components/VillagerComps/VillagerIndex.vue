@@ -12,7 +12,7 @@
         <div v-for="v in filteredVillagers" v-bind:key='v.id'>
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
-                    <b-card-title>{{v.name['name-en']}}</b-card-title>
+                    <b-card-title>{{v.name['name-USen']}}</b-card-title>
                     <b-card-text><em>"{{v['catch-phrase']}}"</em></b-card-text>
                 </router-link>
             </b-card>
@@ -35,7 +35,7 @@ export default {
 
     created(){
         this.loading = true 
-        axios.get('http://acnhapi.com/villagers/')
+        axios.get('http://acnhapi.com/v1/villagers/')
         .then(villagers => {
             this.villagers = villagers.data
             this.villagers = Object.keys(this.villagers).map(i => this.villagers[i]) //convert it to array of objects to use filter
@@ -47,7 +47,7 @@ export default {
         computed:{
         filteredVillagers: function(){
             return this.villagers.filter((v)=>{
-                return v.name['name-en'].match(this.search)
+                return v.name['name-USen'].match(this.search)
             });
         }
     }

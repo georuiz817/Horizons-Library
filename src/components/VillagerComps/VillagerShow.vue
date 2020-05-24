@@ -11,7 +11,7 @@
                 </b-col>
                 <b-col md="6">
                     <b-card-body class='mt-5'>
-                        <b-card-title title-tag='h1'>{{currentVillager.name['name-en']}}</b-card-title>
+                        <b-card-title title-tag='h1'>{{currentVillager.name['name-USen']}}</b-card-title>
                         <b-card-text><em>"{{currentVillager['catch-phrase']}}"</em></b-card-text>
                         <hr>
                         <b-card-body>
@@ -57,7 +57,7 @@ export default {
        created(){
         this.loading = true 
         axios.all([
-          axios.get('http://acnhapi.com/villagers/' + this.id),
+          axios.get('http://acnhapi.com/v1/villagers/' + this.id),
           axios.get('http://acnhapi.com/images/villagers/' + this.id),
         ])
         .then(axios.spread((currentVillager, VillagerImage) => {

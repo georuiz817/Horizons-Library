@@ -12,7 +12,7 @@
         <div v-for="f in filteredFish" v-bind:key='f.id'>
             <b-card class="loopCard mx-auto mb-2">
                 <router-link class="routerLink" :to="'/currentFish/' + f.id" >
-                <b-card-title>{{f.name['name-en'] | capitalize}}</b-card-title>
+                <b-card-title>{{f.name['name-USen'] | capitalize}}</b-card-title>
                 <b-card-text>{{f.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
                 </router-link>
             </b-card>
@@ -35,7 +35,7 @@ export default {
 
     created(){
         this.loading = true 
-        axios.get('http://acnhapi.com/fish/')
+        axios.get('http://acnhapi.com/v1/fish/')
         .then(fish => {
             this.fish = fish.data, //take in the array like object from the api
             this.fish = Object.keys(this.fish).map(i => this.fish[i]) //convert it to array of objects to use filter
@@ -47,7 +47,7 @@ export default {
     computed:{
         filteredFish: function(){
             return this.fish.filter((fish)=>{
-                return fish.name['name-en'].match(this.search.toLowerCase())
+                return fish.name['name-USen'].match(this.search.toLowerCase())
             });
         }
     }

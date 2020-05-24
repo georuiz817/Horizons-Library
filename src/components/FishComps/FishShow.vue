@@ -11,7 +11,7 @@
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>
-                        <b-card-title>{{currentFish.name['name-en'] | capitalize}}</b-card-title>
+                        <b-card-title>{{currentFish.name['name-USen'] | capitalize}}</b-card-title>
                         <b-card-text><em>{{currentFish['catch-phrase']}}</em></b-card-text>
                         <hr>
                         <b-card-body sm="6" class='mt-2'>
@@ -68,7 +68,7 @@ export default {
        created(){
         this.loading = true 
         axios.all([
-          axios.get('http://acnhapi.com/fish/' + this.id),
+          axios.get('http://acnhapi.com/v1/fish/' + this.id),
           axios.get('http://acnhapi.com/images/fish/' + this.id),
         ])
         .then(axios.spread((currentFish, FishImage) => {
