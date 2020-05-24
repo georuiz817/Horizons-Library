@@ -7,7 +7,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col sm="6">
-                    <img :src="'http://acnhapi.com/images/fish/' + currentFish.id" width='100%' height="100%">
+                    <img :src="'http://acnhapi.com/v1/images/fish/' + currentFish.id" width='100%' height="100%">
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>
@@ -67,15 +67,10 @@ export default {
 
        created(){
         this.loading = true 
-        axios.all([
-          axios.get('http://acnhapi.com/v1/fish/' + this.id),
-          axios.get('http://acnhapi.com/images/fish/' + this.id),
-        ])
-        .then(axios.spread((currentFish, FishImage) => {
-              this.currentFish = currentFish.data;
-              this.FishImage = FishImage.data
-              })
-            )
+        axios.get('http://acnhapi.com/v1/fish/' + this.id)
+        .then(currentFish => {
+            this.currentFish = currentFish.data;
+        })
         .finally(() => (this.loading = false))
         },
     }

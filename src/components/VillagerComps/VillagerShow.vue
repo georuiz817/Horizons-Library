@@ -7,7 +7,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
-                   <img :src="'http://acnhapi.com/images/villagers/' + currentVillager.id" width='100%' height="100%">
+                   <img :src="'http://acnhapi.com/v1/images/villagers/' + currentVillager.id" width='100%' height="100%">
                 </b-col>
                 <b-col md="6">
                     <b-card-body class='mt-5'>
@@ -56,18 +56,14 @@ export default {
 
        created(){
         this.loading = true 
-        axios.all([
-          axios.get('http://acnhapi.com/v1/villagers/' + this.id),
-          axios.get('http://acnhapi.com/images/villagers/' + this.id),
-        ])
-        .then(axios.spread((currentVillager, VillagerImage) => {
-              this.currentVillager = currentVillager.data;
-              this.VillagerImage = VillagerImage.data
-              })
-            )
+        axios.get('http://acnhapi.com/v1/villagers/' + this.id)
+        .then(currentVillager => {
+            this.currentVillager = currentVillager.data;
+        })
         .finally(() => (this.loading = false))
         },
     }
+    
 
 </script>
 
