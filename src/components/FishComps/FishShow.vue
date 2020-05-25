@@ -7,7 +7,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col sm="6">
-                    <img :src="'http://acnhapi.com/v1/images/fish/' + currentFish.id" width='100%' height="100%">
+                    <img :src="currentFish.image_uri" width='100%' height="100%">
                 </b-col>
                 <b-col sm="6">
                     <b-card-body>

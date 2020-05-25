@@ -7,7 +7,7 @@
         <b-card class="mx-auto mb-5 mt-5" style="max-width: 70%;">
             <b-row>
                 <b-col md="6">
-                   <img :src="'http://acnhapi.com/v1/images/villagers/' + currentVillager.id" width='100%' height="100%">
+                   <img :src="currentVillager.image_uri" width='100%' height="100%">
                 </b-col>
                 <b-col md="6">
                     <b-card-body class='mt-5'>
