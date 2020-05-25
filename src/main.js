@@ -26,7 +26,7 @@ const routes = [
   { path: '/villagers', component: VillagerIndex},
   { path: '/currentVillager/:id', component: VillagerShow},
   { path: '/bugs', component: BugIndex},
-  { path: './fossils', component: FossilIndex},
+  { path: '/fossils', component: FossilIndex},
   { path: '/about', component: AboutPage},
 ]
 
