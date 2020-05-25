@@ -27,6 +27,24 @@
                     </b-card>
                 </b-col>
             </b-row>
+            <b-row class='mb-2'>
+                <b-col>
+                    <b-card title='Fossils'>
+                        <b-card-text>
+                             Hoo hoot! Oh, several things, I see! Let's take a look, shall we...?
+                        </b-card-text>
+                        <router-link to="/fossils"><b-button variant="primary">Explore</b-button></router-link>
+                    </b-card>
+                </b-col>
+                <b-col>
+                    <b-card title='Bugs'>
+                        <b-card-text>
+                            I caught a common butterfly! They often flutter by!
+                        </b-card-text>
+                        <router-link to="/bugs"><b-button variant="primary">Explore</b-button></router-link>
+                    </b-card>
+                </b-col>
+            </b-row>
         </b-container>
     </div>
 </template>
