@@ -2,7 +2,7 @@
     <div class='home-page'>
         <b-container>
             <b-jumbotron  bg-variant="white" class='mt-3 mx-auto'>
-                <img width="50%" src='../assets/project-logo.png'/>
+                <img width="50%" src='../../assets/project-logo.png'/>
                 <br>
                 <br>
                 <router-link to="/about"><b-button variant="primary">More Info</b-button></router-link>

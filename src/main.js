@@ -5,12 +5,12 @@ import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import VueRouter from 'vue-router';
-import HomePage from './components/HomePage.vue';
+import HomePage from './components/StaticComps/HomePage.vue';
 import FishIndex from './components/FishComps/FishIndex.vue';
 import FishShow from './components/FishComps/FishShow.vue';
 import VillagerIndex from './components/VillagerComps/VillagerIndex.vue';
 import VillagerShow from './components/VillagerComps/VillagerShow.vue';
-import AboutPage from './components/AboutPage.vue';
+import AboutPage from './components/StaticComps/AboutPage.vue';
 import BugIndex from './components/Bugcomps/BugIndex.vue'
 import FossilIndex from './components/FossilComps/FossilIndex.vue'
 import BugShow from './components/Bugcomps/BugShow.vue'

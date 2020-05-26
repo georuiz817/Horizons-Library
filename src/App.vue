@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import NavPage from './components/NavPage.vue'
+import NavPage from './components/StaticComps/NavPage.vue'
 
 
 export default {
