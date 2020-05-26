@@ -10,10 +10,12 @@
             <b-form-input  type='text' v-model='search' placeholder="search bugs"></b-form-input>
         </b-card>
         <div v-for="b in filteredBugs" v-bind:key='b.id'>
+            <router-link class="routerLink" :to="'/currentBug/' + b.id" >
             <b-card class="loopCard mx-auto mb-2">
                 <b-card-title>{{b.name['name-USen'] | capitalize}}</b-card-title>
                 <b-card-text>{{b.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
             </b-card>
+            </router-link>
         </div>
     </div>
 </div>
