@@ -15,6 +15,11 @@
                         <b-card-text><em>{{currentFish['catch-phrase']}}</em></b-card-text>
                         <hr>
                         <b-card-body sm="6" class='mt-2'>
+                            <b-card-title>Icon</b-card-title>
+                            <img :src='currentFish.icon_uri' width="20%"/>
+                        </b-card-body>
+                        <hr>
+                        <b-card-body sm="6" class='mt-2'>
                             <b-card-title>Price</b-card-title>
                             <b-card-text>Store price:  {{currentFish.price}}<img width='15%' src='../../assets/bells_pic.png'/></b-card-text>
                             <b-card-text>Cjs price: {{currentFish['price-cj']}}<img width='15%' src='../../assets/bells_pic.png'/></b-card-text>

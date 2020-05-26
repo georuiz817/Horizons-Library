@@ -10,12 +10,17 @@
                    <img :src="currentVillager.image_uri" width='100%' height="100%">
                 </b-col>
                 <b-col md="6">
-                    <b-card-body class='mt-5'>
+                    <b-card-body class='mt-3'>
                         <b-card-title title-tag='h1'>{{currentVillager.name['name-USen']}}</b-card-title>
                         <b-card-text><em>"{{currentVillager['catch-phrase']}}"</em></b-card-text>
                         <hr>
-                        <b-card-body>
-                            <b-card-title>About</b-card-title>
+                    <b-card-body sm="6" class='mt-2'>
+                        <b-card-title>Icon</b-card-title>
+                        <img :src='currentVillager.icon_uri' width="20%"/>
+                    </b-card-body>
+                    <hr>
+                    <b-card-body>
+                        <b-card-title>About</b-card-title>
                             <b-row> 
                                 <b-col sm='6' class='mt-2'>
                                     <b-card-text>Birthday: {{currentVillager['birthday-string']}}</b-card-text>
