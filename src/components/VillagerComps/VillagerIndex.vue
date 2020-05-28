@@ -36,8 +36,8 @@ export default {
     created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/villagers/')
-        .then(villagers => {
-            this.villagers = villagers.data
+        .then(response => {
+            this.villagers = response.data
             this.villagers = Object.keys(this.villagers).map(i => this.villagers[i]) //convert it to array of objects to use filter
             console.log(this.villagers)//logged to make sure working correctly
         })

@@ -61,8 +61,8 @@ export default {
        created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/villagers/' + this.id)
-        .then(currentVillager => {
-            this.currentVillager = currentVillager.data;
+        .then(response => {
+            this.currentVillager = response.data;
         })
         .finally(() => (this.loading = false))
         },

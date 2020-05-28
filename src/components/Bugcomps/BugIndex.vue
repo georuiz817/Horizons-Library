@@ -36,8 +36,8 @@ export default {
     created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/bugs/')
-        .then(bugs => {
-            this.bugs = bugs.data, //take in the array like object from the api
+        .then(response => {
+            this.bugs = response.data, //take in the array like object from the api
             this.bugs = Object.keys(this.bugs).map(i => this.bugs[i]) //convert it to array of objects to use filter
             console.log(this.bugs)//logged to make sure working correctly
         })

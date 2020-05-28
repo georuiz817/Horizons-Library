@@ -34,8 +34,8 @@ export default {
     created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/fossils/')
-        .then(fossils => {
-            this.fossils = fossils.data, //take in the array like object from the api
+        .then(response => {
+            this.fossils = response.data, //take in the array like object from the api
             this.fossils = Object.keys(this.fossils).map(i => this.fossils[i]) //convert it to array of objects to use filter
             console.log(this.fossils)//logged to make sure working correctly
         })

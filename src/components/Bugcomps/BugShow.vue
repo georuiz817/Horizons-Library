@@ -69,8 +69,8 @@ export default {
        created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/bugs/' + this.id)
-        .then(currentBug => {
-            this.currentBug = currentBug.data;
+        .then(response => {
+            this.currentBug = response.data;
         })
         .finally(() => (this.loading = false))
         },

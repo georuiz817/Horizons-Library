@@ -72,8 +72,8 @@ export default {
        created(){
         this.loading = true 
         axios.get('http://acnhapi.com/v1/fish/' + this.id)
-        .then(currentFish => {
-            this.currentFish = currentFish.data;
+        .then(response => {
+            this.currentFish = response.data;
         })
         .finally(() => (this.loading = false))
         },
