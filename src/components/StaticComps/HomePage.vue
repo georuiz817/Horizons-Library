@@ -11,11 +11,11 @@
         <b-container> 
             <b-row class='mb-2'>
                 <b-col>
-                      <b-card title="Fish">
+                    <b-card title="Fish">
                         <b-card-text>
                             I caught a blue marlin! Listen to this fish, it's got a point.
                         </b-card-text>
-                         <router-link to="/fish"><b-button variant="primary">Explore</b-button></router-link>
+                        <router-link to="/fish"><b-button variant="primary">Explore</b-button></router-link>
                     </b-card>
                 </b-col>
                 <b-col>
@@ -50,7 +50,4 @@
 </template>
  
         
-<style lang='scss'>
-
-</style>
 

@@ -14,6 +14,7 @@
                         <b-card-title>{{currentBug.name['name-USen'] | capitalize}}</b-card-title>
                         <b-card-text><em>{{currentBug['catch-phrase']}}</em></b-card-text>
                         <hr>
+                    </b-card-body>
                         <b-card-body sm="6" class='mt-2'>
                             <b-card-title>Icon</b-card-title>
                             <img :src='currentBug.icon_uri' width="20%"/>
@@ -42,7 +43,6 @@
                             </b-row>
                         </b-card-body>
                         <hr>
-                    </b-card-body>
                 </b-col>
             </b-row>
             <b-card-body>
