@@ -54,14 +54,5 @@ export default {
 }
 </script>
 
-<!-- divider -->
+ 
 
-<style lang='scss'>
-.loopCard{
-    width: 50%;
-    .routerLink{
-    color: #2c3e50;;
- }
-}
-
-</style>

@@ -11,7 +11,7 @@
             </b-card>
             <div v-for="v in filteredVillagers" v-bind:key='v.id'>
                 <b-card class="loopCard mx-auto mb-2">
-                    <router-link class="routerLink" :to="'/currentVillager/' + v.id" >                 
+                    <router-link class="r-link" :to="'/currentVillager/' + v.id" >                 
                         <b-card-title>{{v.name['name-USen']}}</b-card-title>
                         <b-card-text><em>"{{v['catch-phrase']}}"</em></b-card-text>
                     </router-link>

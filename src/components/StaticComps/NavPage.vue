@@ -17,12 +17,3 @@
 </template>
 
 
-
-<style  lang='scss'>
-.r-link{
-    color: #2c3e50;
-}
-.r-link:hover{
-    color: #2c3e50;
-}
-</style>
