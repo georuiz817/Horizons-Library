@@ -11,9 +11,10 @@ import FishShow from './components/FishComps/FishShow.vue';
 import VillagerIndex from './components/VillagerComps/VillagerIndex.vue';
 import VillagerShow from './components/VillagerComps/VillagerShow.vue';
 import AboutPage from './components/StaticComps/AboutPage.vue';
-import BugIndex from './components/Bugcomps/BugIndex.vue'
-import FossilIndex from './components/FossilComps/FossilIndex.vue'
-import BugShow from './components/Bugcomps/BugShow.vue'
+import BugIndex from './components/Bugcomps/BugIndex.vue';
+import FossilIndex from './components/FossilComps/FossilIndex.vue';
+import BugShow from './components/Bugcomps/BugShow.vue';
+
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
