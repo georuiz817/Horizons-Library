@@ -14,7 +14,7 @@ import AboutPage from './components/StaticComps/AboutPage.vue';
 import BugIndex from './components/Bugcomps/BugIndex.vue';
 import FossilIndex from './components/FossilComps/FossilIndex.vue';
 import BugShow from './components/Bugcomps/BugShow.vue';
-
+import FossilShow from './components/FossilComps/FossilShow.vue';
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
@@ -29,6 +29,7 @@ const routes = [
   { path: '/currentVillager/:id', component: VillagerShow},
   { path: '/bugs', component: BugIndex},
   { path: '/fossils', component: FossilIndex},
+  { path: '/currentFossil/:file-name', component: FossilShow},
   { path: '/currentBug/:id', component: BugShow},
   { path: '/about', component: AboutPage},
 ]

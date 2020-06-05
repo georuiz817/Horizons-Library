@@ -10,10 +10,12 @@
                 <b-form-input  type='text' v-model='search' placeholder="search fossils"></b-form-input>
             </b-card>
             <div v-for="f in filteredFossils" v-bind:key='f.id'>
-                <b-card class="loopCard mx-auto mb-2">
-                    <b-card-title>{{f.name['name-USen'] | capitalize}}</b-card-title>
-                    <b-card-text>{{f.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
-                </b-card>
+                <router-link class="r-link" :to="'/currentFossil/' + f['file-name']" >
+                    <b-card class="loopCard mx-auto mb-2">
+                        <b-card-title>{{f.name['name-USen'] | capitalize}}</b-card-title>
+                        <b-card-text>{{f.price}}<img width='10%' src='../../assets/bells_pic.png'></b-card-text>
+                    </b-card>
+                </router-link>
             </div>
         </div>
     </div>
