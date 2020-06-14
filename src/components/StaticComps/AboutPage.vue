@@ -7,8 +7,6 @@
                     Once the list has loaded you can select or search for a specific item and go to it's individual
                     page that includes a more detailed description and image. Horizons Library is a fan-made website that claims no ownership of any intellectual property associated with Nintendo or Animal Crossing
                 </p>
-                <p>Email any questions,comments, or concerns to <a href="mailto:ruiz.fullstack@gmail.com">ruiz.fullstack@gmail.com</a></p>
-                <p>The websites GitHub repo can be viewed <a href='https://github.com/georuiz817/Horizons-Library' target="_blank">here</a></p>
                 <hr class="my-4">
                 <h1>Vue</h1>
                 <p> Horizons Library is a front end website made with Vue.js and deployed on the web PaSS Heroku. Having built websites with React and vanilla HTML/CSS, I was curious to try the newer and different framework. It provided a lightweight and easy to use template, as well as Bootstrap Vue to make your site mobile responsive and aesthitcally pleasing. One simple but useful component that stands out to me personally using Vue.js is the v-for directive. Having to list the large amount of Animal Crossing data is made easy and completed quickly.</p>

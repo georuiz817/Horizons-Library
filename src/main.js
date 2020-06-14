@@ -15,6 +15,7 @@ import BugIndex from './components/Bugcomps/BugIndex.vue';
 import FossilIndex from './components/FossilComps/FossilIndex.vue';
 import BugShow from './components/Bugcomps/BugShow.vue';
 import FossilShow from './components/FossilComps/FossilShow.vue';
+import ContactPage from './components/StaticComps/ContactPage.vue'
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
@@ -32,6 +33,7 @@ const routes = [
   { path: '/currentFossil/:file-name', component: FossilShow},
   { path: '/currentBug/:id', component: BugShow},
   { path: '/about', component: AboutPage},
+  { path: '/contact', component: ContactPage},
 ]
 
 const router = new VueRouter({
